@@ -12,8 +12,8 @@ describe('Users', () => {
 
     it('Should be able to create a new user', async () => {
         const response = await request(app).post('/users').send({
-            email: 'user@example3.com',
-            name: 'User Example3'
+            email: 'user@example9.com',
+            name: 'User Example9'
         })
 
         expect(response.status).toBe(201)
@@ -22,8 +22,8 @@ describe('Users', () => {
     it("Should not be able to create a user with exists email", async () => {
         const response = await request(app).post("/users")
         .send({
-            email: "user@example3.com",
-            name: "User Example3",
+            email: "user@example9.com",
+            name: "User Example9",
         })
 
         expect(response.status).toBe(400)
