@@ -3,18 +3,6 @@ import { getCustomRepository } from "typeorm"
 import { SurveysUsersRepository } from "../repositories/SurveysUsersRepository"
 
 class AnswerController {
-
-    // http://localhost:3333/answers/1?u=47860c65-ae8b-4656-99d2-0cb6aada5651
-
-    /**
-     * 
-     * Route Params => Parametros que compõe a rota
-     * routes.get('/answers/:value')
-     * 
-     * Query Params => Busca, Paginação, não obrigatórios
-     * ?
-     * chave = valor
-     */
     async execute(request: Request, response: Response) {
         const { value } = request.params
         const { u } = request.query
